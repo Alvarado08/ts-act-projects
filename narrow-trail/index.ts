@@ -40,20 +40,15 @@ export function runCommands() {
 			resourceState = 1;
 		}else if(randomDayGenerator === 2){
 			resourceState = 2;
-		}
-		
-		if(randomDayGenerator >= 3 && resourceState === undefined){
+		}else if(randomDayGenerator >= 3 && resourceState === undefined){
 			resourceState = randomDayGenerator % 2 === 0 ? 1 : 2;
-		}
-
-		if(randomDayGenerator >= 3 && resourceState === 1){
+		}else if(randomDayGenerator >= 3 && resourceState === 1){
 			food += randomDayGenerator;
 			resourceState = undefined;
 		}else if(randomDayGenerator >= 3 && resourceState === 2){
 			water += randomDayGenerator;
 			resourceState = undefined;
 		}
-
 
 		food--;
 		water--;
